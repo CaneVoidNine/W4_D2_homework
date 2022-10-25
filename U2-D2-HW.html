@@ -501,6 +501,16 @@
       };
 
       /* 17 */
+      let allPsInBlogs = document.querySelectorAll(".blog-post>p:nth-child(3)");
+      for (let i = 0; i < allPsInBlogs.length; i++) {
+        console.log(allPsInBlogs[i]);
+        let innerText = allPsInBlogs[i].innerText;
+        let textToarray = innerText.split("");
+        let subArray = textToArray.slice(50);
+        let finalString = subArray.join("");
+        console.log(finalString);
+        allPsInBlogs[i].innerText = finalString;
+      }
 
       /* 18 */
       createNewPost = () => {
